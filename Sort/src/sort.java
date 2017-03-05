@@ -40,8 +40,8 @@ public class sort {
 		/*	for(int ctr = 0; ctr < 12; ctr++)
 			System.out.println(x[ctr]); */
 
-		try
-		{
+		//try
+	//	{
 			System.out.println("write \n");
 			FileOutputStream fout = 
 					new FileOutputStream(out);
@@ -53,12 +53,12 @@ public class sort {
 				myOutput.println(x.get(i).toString());
 			}
 			myOutput.close();
-		}
-		catch (IOException e)
-		{
-			System.out.println(e);
-			System.exit(1);
-		}
+	//	}
+	//	catch (IOException e)
+	//	{
+		//	System.out.println(e);
+		//	System.exit(1);
+	//	}
 		/*	System.out.println("---");
 		for(int i = 0; i < x.size(); i++) {
 			System.out.println((x.get(i)).toString());

@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -24,11 +25,19 @@ public class Main {
 				System.out.println("Your 3rd argument = " + ((args.length > 2) ? args[2] : "<null>"));
 				System.out.println("Your 4th argument = " + ((args.length > 3) ? args[3] : "<null>"));
 				System.out.println("please specify four parameters");
+				break;
 			}
 
+			catch (FileNotFoundException e){
+				System.err.println("try different name of the output/input file. don't use inapropriate stuff ");
+				break;
+			}
+			
 			catch (IOException e){
-				System.err.println( "Error1: " + e.getMessage());
-
+				System.err.println( "Error: " + e.getMessage());
+				System.out.println(e);
+				System.exit(1);
+				break;
 			}
 			catch (NotASpecificParameterException e){
 				System.err.println("Please make parameters correct. You should type keys");
@@ -55,6 +64,9 @@ public class Main {
 					}
 				} while (!done);
 			}
+			
+		
+			
 			catch (Exception e){
 				System.err.println( e.getMessage());
 			}
