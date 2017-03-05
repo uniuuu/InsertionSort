@@ -26,10 +26,10 @@ public class sort {
 		out = args[1];
 		//k[0] = args[2];
 		//k[1] = args[3];
-		int numberOfArgs = args.length;
+	/*	int numberOfArgs = args.length;
 		for (int i=0; i<numberOfArgs; i++){
 			System.out.println("I’ve got " + args[i]);
-		}
+		}*/
 		readFile(myList);
 		insertionSort(myList, args );
 		writeFile(myList); 
@@ -42,7 +42,7 @@ public class sort {
 
 		//try
 	//	{
-			System.out.println("write \n");
+	//		System.out.println("write \n");
 			FileOutputStream fout = 
 					new FileOutputStream(out);
 			PrintStream myOutput =
@@ -71,7 +71,7 @@ public class sort {
 		//int i = 0;
 		//	try
 		//	{
-		System.out.println("read \n");
+	//	System.out.println("read \n");
 		FileInputStream fstream = 
 				new FileInputStream(in);
 		DataInputStream in = new DataInputStream(fstream);
@@ -101,18 +101,18 @@ public class sort {
 
 	public static ArrayList<Object> insertionSort (ArrayList<Object> x, String args[]) throws Exception
 	{
-		System.out.println(Arrays.toString(args)+ " start for");
+	//	System.out.println(Arrays.toString(args)+ " start for");
 
 		if (args[2].equals("-i") && args[3].equals("-a")){
-			System.out.println(Arrays.toString(args) + " equals 1st for \n");
+		//	System.out.println(Arrays.toString(args) + " equals 1st for \n");
 			if (((String) x.get(0)).matches(".*\\d+.*") == true){
 			int i, j, key, temp;
 			for(i = 1; i< x.size(); i++){
-				System.out.println("for");
+			//	System.out.println("for");
 				key = Integer.valueOf((String) x.get(i));
 				j = i-1;
 				while (j>=0 && key < (Integer.valueOf(String.valueOf(x.get(j))))){
-					System.out.println("while");
+			//		System.out.println("while");
 					temp = Integer.valueOf(String.valueOf(x.get(j)));
 					//list[j] = x.get(j+1);
 					x.set(j,x.get(j+1));
@@ -131,7 +131,7 @@ public class sort {
 		}
 		else if (args[2].equals("-s") && args[3].equals("-a")){
 			if (((String) x.get(0)).matches(".*\\d+.*") == false){
-			System.out.println(Arrays.toString(args) + "equals 2nd");
+	//		System.out.println(Arrays.toString(args) + "equals 2nd");
 			int i, j;
 			String key, temp;
 			for(i = 1; i< x.size(); i++){
@@ -154,7 +154,7 @@ public class sort {
 		}
 		else if (args[2].equals("-i") && args[3].equals("-d")){
 			if (((String) x.get(0)).matches(".*\\d+.*") == true){
-			System.out.println(Arrays.toString(args) + "equals 3rd");
+		//	System.out.println(Arrays.toString(args) + "equals 3rd");
 			int i, j, key, temp;
 			for(i = 1; i< x.size(); i++){
 				key = Integer.valueOf(String.valueOf(x.get(i)));
@@ -175,7 +175,7 @@ public class sort {
 		}
 		else if (args[2].equals("-s") && args[3].equals("-d")){
 			if (((String) x.get(0)).matches(".*\\d+.*") == false){
-			System.out.println(Arrays.toString(args) + "equals 4th");
+		//	System.out.println(Arrays.toString(args) + "equals 4th");
 			int i, j;
 			String key, temp;
 			for(i = 1; i< x.size(); i++){
@@ -192,12 +192,12 @@ public class sort {
 			}
 		}
 			else {
-				System.err.println("sort source type exception \n");
+			//	System.err.println("sort source type exception \n");
 				throw new NotASpecificParameterException("This is not a words contained file, please use -i key instead");
 			}
 		}
 		else{ 
-			System.err.println("sort exception \n");
+			//System.err.println("sort exception \n");
 			throw new NotASpecificParameterException();
 		}
 		return x;
