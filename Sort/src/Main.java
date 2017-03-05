@@ -65,10 +65,16 @@ public class Main {
 				} while (!done);
 			}
 			
-		
+		catch (IllegalArgumentException e)
+			{
+			System.err.println("Please specify only four arguments");
+	
+			break;
+			}
 			
 			catch (Exception e){
 				System.err.println( e.getMessage());
+				break;
 			}
 
 		} while (!done1);

@@ -20,7 +20,7 @@ public class sort {
 
 
 	public static void Run(String args[]) throws Exception {
-
+		if (args.length > 4) { throw new IllegalArgumentException(); }
 		myList = new ArrayList<Object>();
 		in = args[0];
 		out = args[1];
