@@ -29,7 +29,7 @@ public class Main {
 			}
 
 			catch (FileNotFoundException e){
-				System.err.println("try different name of the output/input file. don't use inapropriate stuff ");
+				System.err.println("File not found or just try different name of the output/input file. don't use inapropriate stuff ");
 				break;
 			}
 			
